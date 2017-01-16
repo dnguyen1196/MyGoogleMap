@@ -18,11 +18,10 @@ include_directories(${BOOST_ROOT})
 include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
 
-
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}) # Set the directory of the output binar
 
 set(SOURCE_FILES main.cpp mygooglemap.cpp) # Add all the necessary source files
 add_executable(boosted ${SOURCE_FILES})
 target_link_libraries(boosted ${Boost_LIBRARIES}) # Add boost link to the project
 
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}) # Set the directory of the output binary
